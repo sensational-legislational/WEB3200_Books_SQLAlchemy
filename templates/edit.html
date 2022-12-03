@@ -1,0 +1,27 @@
+{% extends "flask_user_layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{validation_error}}</h2>
+</div>
+
+<form method="post" class="form container input-group">
+    <div class="input-group">
+        <label class="label">Author</label>
+        <input type="text" class="form-control" name="author" required value="{{request.form.author}}">
+    </div>
+    <div class="input-group">
+        <label class="label">Title</label>
+        <input type="text" class="form-control" name="title" required value="{{request.form.title}}">
+    </div>
+    <div class="input-group">
+        <label class="label">Description</label>
+        <input type="text" class="form-control" name="description" required value="{{request.form.description}}">
+    </div>
+    <br>
+    <div class="input-group">
+        <input class="btn" type="submit">
+    </div>
+</form>
+
+{% endblock %}

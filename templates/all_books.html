@@ -1,0 +1,14 @@
+{% extends "flask_user_layout.html" %}
+
+{% block content %}
+
+{% for book in books %}
+<div class="container">
+    <h2></h2>{{book['title']}}</h2>
+    <h4>{{book['author']}}</h4>
+    <p>{{book['description']}} <a href="{{ url_for('edit', id=book['id']) }}">Edit...</a></p>
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}
